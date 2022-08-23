@@ -50,6 +50,7 @@ jobs:
         docker network create openlxp
         echo "Docker network successfully created"
         echo "Running coverage unit test"
+        cd openlxp-xia-sample/
         docker-compose --env-file ./.env run app_xia_sample sh -c "python manage.py waitdb && coverage run manage.py test --tag=unit && flake8 && coverage report && coverage report --fail-under=80"
 
 
