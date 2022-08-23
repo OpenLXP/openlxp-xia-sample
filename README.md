@@ -1,1 +1,1 @@
-# Enterprise Course Catalog: OPENLXP-SAMPLE
+# Enterprise Course Catalog: OPENLXP-SAMPLE 
