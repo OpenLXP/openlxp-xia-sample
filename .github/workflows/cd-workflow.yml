@@ -5,15 +5,15 @@ on:
     branches: 
       - main
       - feature/sample-xia
-    paths:
-      - openlxp-xia-sample/*
+#    paths:
+#      - openlxp-xia-sample/*
   pull_request:
     branches: 
       - main
       - dev
       - feature/sample-xia
-    paths:
-      - openlxp-xia-sample/*
+#    paths:
+#      - openlxp-xia-sample/*
 jobs:
   code-test:
 # Kicks off the workflow and prepares Github to run coverage test using a ubuntu-latest container.
