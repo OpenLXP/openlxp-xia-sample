@@ -1,0 +1,66 @@
+Index: app/core/management/commands/load_target_metadata.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import logging\nfrom django.core.serializers.json import DjangoJSONEncoder\nimport requests\nfrom django.core.management.base import BaseCommand\nfrom core.models import XIAConfiguration, MetadataLedger\nimport json\n# from django.utils import timezone\n\nlogger = logging.getLogger('dict_config_logger')\n\n\ndef get_api_endpoint():\n    api_endpoint = \"http://openlxp-xis-load:8020/api/metadata/\"\n    return api_endpoint\n\n\ndef get_publisher_to_add():\n    \"\"\"Retrieve publisher from XIA configuration \"\"\"\n    xia_data = XIAConfiguration.objects.first()\n    publisher = xia_data.publisher\n    return publisher\n\n\ndef post_data_to_xis():\n    \"\"\"POSTing XIA metadata_ledger to XIS metadata_ledger\"\"\"\n    # Get record to load into XIS metadata_ledger\n    data = MetadataLedger.objects.filter(\n        record_lifecycle_status='Active',\n        target_metadata_validation_status='Y').exclude(\n        target_metadata_transmission_status='Invalid' and 'Pending').values(\n        'metadata_record_uuid',\n        'target_metadata',\n        'target_metadata_hash',\n        'target_metadata_key').first()\n\n    # Adding Publisher in the list to POST to XIS\n    dict_add_publisher = {\"provider_name\": get_publisher_to_add()}\n    data.update(dict_add_publisher)\n    # Renaming XIA column names to match with XIS column names\n    data['unique_record_identifier'] = data.pop('metadata_record_uuid')\n    data['metadata'] = data.pop('target_metadata')\n    data['metadata_hash'] = data.pop('target_metadata_hash')\n    data['metadata_key'] = data.pop('target_metadata_key')\n\n    # POSTing data to XIS\n    headers = {'Content-Type': 'application/json'}\n    # Getting UUID to update target_metadata_transmission_status to pending\n    uuid_val = data.get('unique_record_identifier')\n    data = json.dumps(data, cls=DjangoJSONEncoder)\n\n    # Updating status in XIA metadata_ledger to 'Pending'\n    MetadataLedger.objects.filter(\n        metadata_record_uuid=uuid_val).update(\n        target_metadata_transmission_status='Pending')\n    # POSTing metadata_ledger to XIS\n    xis_response = requests.post(url=get_api_endpoint(),\n                                 data=data, headers=headers)\n\n    # Receiving XIS response after validation\n    #logger.info('XIS response after Validation'\n    #            + xis_response.text)\n\n    # Updating target_metadata_transmission_status to 'Validated' and\n    # updating target_metadata_transmission_date in XIS Metadata_ledger\n\n    # if xis_response_message == 'Validatation_Success':\n    # MetadataLedger.objects.filter(\n    #     metadata_record_uuid=data.get('xis_response.unique_record_identifier')).update(\n    #     target_metadata_transmission_status='Validated',\n    #     target_metadata_transmission_date=timezone.now())\n\n    # Updating target_metadata_transmission_status to 'Invalid' and\n    # updating target_metadata_transmission_date in XIS Metadata_ledger\n\n    # else:\n    # MetadataLedger.objects.filter(\n    #     metadata_record_uuid=data.get('xis_response.unique_record_identifier')).update(\n    #     target_metadata_transmission_status='Invalid',\n    #     target_metadata_transmission_date=timezone.now())\n    return\n\n\ndef check_records_to_load_into_xis():\n    \"\"\"Retrieve number of Metadata_Ledger records in XIA to load into XIS \"\"\"\n\n    data = MetadataLedger.objects.filter(\n        record_lifecycle_status='Active',\n        target_metadata_validation_status='Y').exclude(\n        target_metadata_transmission_status='Invalid' and 'Pending').all()\n\n    # Checking available no. of records in XIA to load into XIS is Zero or not\n    if len(data) == 0:\n        logger.info(\"Data Loading in XIS is complete, Zero records are \"\n                    \"available in XIA to transmit\")\n    else:\n        post_data_to_xis()\n        check_records_to_load_into_xis()\n\n\nclass Command(BaseCommand):\n    \"\"\"Django command to load metadata in the Experience Index Service (XIS)\"\"\"\n\n    def handle(self, *args, **options):\n        \"\"\"Metadata is load from XIA Metadata_Ledger to XIS Metadata_Ledger\"\"\"\n\n        check_records_to_load_into_xis()\n\n\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/core/management/commands/load_target_metadata.py b/app/core/management/commands/load_target_metadata.py
+--- a/app/core/management/commands/load_target_metadata.py	
++++ b/app/core/management/commands/load_target_metadata.py	
+@@ -57,8 +57,8 @@
+                                  data=data, headers=headers)
+ 
+     # Receiving XIS response after validation
+-    #logger.info('XIS response after Validation'
+-    #            + xis_response.text)
++    logger.info('XIS response after Validation'
++               + xis_response.text)
+ 
+     # Updating target_metadata_transmission_status to 'Validated' and
+     # updating target_metadata_transmission_date in XIS Metadata_ledger
+@@ -104,7 +104,3 @@
+         """Metadata is load from XIA Metadata_Ledger to XIS Metadata_Ledger"""
+ 
+         check_records_to_load_into_xis()
+-
+-
+-
+-
+Index: Dockerfile
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Dockerfile\n\nFROM python:3.7-buster\n\n# install nginx\nRUN apt-get update && apt-get install nginx vim -y --no-install-recommends\nCOPY nginx.default /etc/nginx/sites-available/default\nRUN ln -sf /dev/stdout /var/log/nginx/access.log \\\n    && ln -sf /dev/stderr /var/log/nginx/error.log\n\n# copy source and install dependencies\nRUN mkdir -p /opt/app\nRUN mkdir -p /opt/app/pip_cache\nRUN mkdir -p /opt/app/openlxp-xia-dau\nCOPY requirements.txt start-server.sh start-app.sh /opt/app/\nRUN chmod +x /opt/app/start-server.sh\nRUN chmod +x /opt/app/start-app.sh\nCOPY ./app /opt/app/openlxp-xia-dau/\nWORKDIR /opt/app\nRUN pip install -r requirements.txt --cache-dir /opt/app/pip_cache\nRUN chown -R www-data:www-data /opt/app\n\nWORKDIR /opt/app/openlxp-xia-dau/\n\n# start server\nEXPOSE 8020\nSTOPSIGNAL SIGTERM\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Dockerfile b/Dockerfile
+--- a/Dockerfile	
++++ b/Dockerfile	
+@@ -17,7 +17,7 @@
+ RUN chmod +x /opt/app/start-app.sh
+ COPY ./app /opt/app/openlxp-xia-dau/
+ WORKDIR /opt/app
+-RUN pip install -r requirements.txt --cache-dir /opt/app/pip_cache
++RUN pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host=files.pythonhosted.org --no-cache-dir -r requirements.txt --cache-dir /opt/app/pip_cache
+ RUN chown -R www-data:www-data /opt/app
+ 
+ WORKDIR /opt/app/openlxp-xia-dau/
+Index: requirements.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>mysqlclient>=2.0.3,<2.1.0\n\ndjango-mysql>=3.10.0,<3.11.0\n\nDjango>=3.1.4,<3.2.0\n\ndjangorestframework>=3.12.2,<3.13.0\nboto3~=1.16.54\n\nflake8>=3.8.4,<3.9.0\n\ngunicorn>=20.0.4,<20.1.0\n\nmartor>=1.5.8,<1.6.0\n\npandas>=1.1.5,<1.2.0\n\nfsspec>=0.8.5,<0.9.0\n\nnumpy>= 1.19.5, < 1.20.0\n\ns3fs\n\nrequests~=2.25.1\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/requirements.txt b/requirements.txt
+--- a/requirements.txt	
++++ b/requirements.txt	
+@@ -5,6 +5,7 @@
+ Django>=3.1.4,<3.2.0
+ 
+ djangorestframework>=3.12.2,<3.13.0
++
+ boto3~=1.16.54
+ 
+ flake8>=3.8.4,<3.9.0
