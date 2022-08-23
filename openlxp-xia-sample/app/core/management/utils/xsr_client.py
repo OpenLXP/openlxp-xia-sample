@@ -67,7 +67,7 @@ def read_source_file():
 def get_source_metadata_key_value(data_dict):
     """Function to create key value for source metadata """
     # field names depend on source data and SOURCESYSTEM is system generated
-    field = ['shortname', 'SOURCESYSTEM']
+    field = ['coursecode', 'SOURCESYSTEM']
     field_values = []
 
     for item in field:
