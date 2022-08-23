@@ -85,6 +85,7 @@ jobs:
     - name: Docker build
       run: |
        echo "Start docker build"
+       cd openlxp-xia-sample/
        docker build . -t openlxp/openlxp-xia-sample
     - name: Push Image
       run: |
