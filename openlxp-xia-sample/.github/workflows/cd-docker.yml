@@ -4,10 +4,12 @@ on:
   push:
     branches: 
       - main
+      - feature/sample-xia
   pull_request:
     branches: 
       - main
       - dev
+      - feature/sample-xia
 jobs:
   code-test:
 # Kicks off the workflow and prepares Github to run coverage test using a ubuntu-latest container.
@@ -37,7 +39,7 @@ jobs:
         git clone https://openlxp-host:${{ secrets.ACCESS_TOKEN }}@github.com/OpenLXP/openlxp-private.git
         echo "Private repository cloned successfully"
         echo "Copying .env file from openlxp-private to current working directory"
-        cp ./openlxp-private/openlxp-xia-sample-env/.env .
+        cp ./openlxp-private/openxlp-xia-sample-env/.env .
         echo "Copied .env file successfully"
         echo "Create openlxp docker network"
         docker network create openlxp
