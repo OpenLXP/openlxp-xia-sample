@@ -4,10 +4,12 @@ on:
   push:
     branches: 
       - main
+      - feature/sample-xia
   pull_request:
     branches: 
       - main
       - dev
+      - feature/sample-xia
 jobs:
   code-test:
 # Kicks off the workflow and prepares Github to run coverage test using a ubuntu-latest container.
