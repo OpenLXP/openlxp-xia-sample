@@ -1,0 +1,64 @@
+Index: app/core/management/commands/validate_source_metadata.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import logging\n\nfrom django.core.management.base import BaseCommand\nfrom django.utils import timezone\n\nfrom core.management.utils.xia_internal import (get_source_metadata_key_value,\n                                                required_recommended_logs,\n                                                check_dict, check_list,\n                                                check_validation_value)\nfrom core.management.utils.xss_client import read_json_data\nfrom core.models import MetadataLedger, XIAConfiguration\n\nlogger = logging.getLogger('dict_config_logger')\n\n\ndef get_source_validation_schema():\n    \"\"\"Retrieve source validation schema from XIA configuration \"\"\"\n    logger.info(\"Configuration of schemas and files\")\n    xia_data = XIAConfiguration.objects.first()\n    source_validation_schema = xia_data.source_metadata_schema\n    logger.info(\"Reading schema for validation\")\n    # Read source validation schema as dictionary\n    schema_data_dict = read_json_data(source_validation_schema)\n    return schema_data_dict\n\n\ndef get_required_fields_for_source_validation(schema_data_dict):\n    \"\"\"Creating list of fields which are Required\"\"\"\n    required_column_name = list()\n    for element in schema_data_dict:\n        # creates required_column_list using path of keys to element required\n        if schema_data_dict[element] == \"Required\":\n            required_column_name.append(element)\n    return required_column_name\n\n\ndef get_source_metadata_for_validation():\n    \"\"\"Retrieving  source metadata from MetadataLedger that needs to be\n        validated\"\"\"\n    logger.info(\n        \"Accessing source metadata from MetadataLedger that needs to be \"\n        \"validated\")\n    source_data_dict = MetadataLedger.objects.values(\n        'source_metadata').filter(source_metadata_validation_status='',\n                                  record_lifecycle_status='Active'\n                                  ).exclude(\n        source_metadata_extraction_date=None)\n\n    return source_data_dict\n\n\ndef store_source_metadata_validation_status(source_data_dict,\n                                            key_value_hash, validation_result,\n                                            record_status_result):\n    \"\"\"Storing validation result in MetadataLedger\"\"\"\n\n    source_data_dict.filter(\n        source_metadata_key_hash=key_value_hash).update(\n        source_metadata_validation_status=validation_result,\n        source_metadata_validation_date=timezone.now(),\n        record_lifecycle_status=record_status_result,\n        metadata_record_inactivation_date=timezone.now()\n    )\n\n\ndef source_metadata_value_for_validation(\n        ind, data_dict, required_column_name_list, validation_result):\n    \"\"\"function to navigate to value in source metadata to be validated \"\"\"\n    # If data value is a dictionary\n    if isinstance(data_dict[required_column_name_list[0]], dict):\n        check_dict(ind, data_dict[required_column_name_list[0]],\n                   required_column_name_list[1:], required_column_name_list[0],\n                   validation_result)\n\n    # If data is a list\n    elif isinstance(data_dict[required_column_name_list[0]], list):\n        check_list(ind, data_dict[required_column_name_list[0]],\n                   required_column_name_list[1:], required_column_name_list[0],\n                   validation_result)\n\n    # If data value is a string or NoneType\n    else:\n        validation_result =\\\n            check_validation_value(ind,\n                                   data_dict[required_column_name_list[0]],\n                                   required_column_name_list[0],\n                                   required_column_name_list[0],\n                                   validation_result)\n\n    return validation_result\n\n\ndef validate_source_using_key(source_data_dict, required_column_name):\n    \"\"\"Validating source data against required column names\"\"\"\n\n    logger.info(\"Validating source data against required column names\")\n    len_source_metadata = len(source_data_dict)\n    for ind in range(len_source_metadata):\n        # Updating default validation for all records\n        validation_result = 'Y'\n        record_status_result = 'Active'\n        for table_column_name in source_data_dict[ind]:\n            # looping in source metadata\n            for item in required_column_name:\n                # looping through elements in required column list\n                data_dict = source_data_dict[ind][table_column_name]\n                # creating list of key values to access required value split\n                # by .\n                item_list = item.split('.')\n                # function to navigate to required values and validate\n                validation_result = \\\n                    source_metadata_value_for_validation(\n                        ind, data_dict, item_list,\n                        validation_result)\n\n            # if validation fails for record record status is\n            # Update to record status to inactive if record is invalid\n            if validation_result == 'N':\n                record_status_result = 'Inactive'\n\n            # Key creation for source metadata\n            key = \\\n                get_source_metadata_key_value(source_data_dict[ind]\n                                              [table_column_name])\n        # Calling function to update validation status\n        store_source_metadata_validation_status(source_data_dict,\n                                                key['key_value_hash'],\n                                                validation_result,\n                                                record_status_result)\n\n\nclass Command(BaseCommand):\n    \"\"\"Django command to validate source data\"\"\"\n\n    def handle(self, *args, **options):\n        \"\"\"\n            Source data is validated and stored in metadataLedger\n        \"\"\"\n        schema_data_dict = get_source_validation_schema()\n        required_column_name = \\\n            get_required_fields_for_source_validation(schema_data_dict)\n        source_data_dict = get_source_metadata_for_validation()\n        validate_source_using_key(source_data_dict, required_column_name)\n\n        logger.info(\n            'MetadataLedger updated with source metadata validation status')\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/core/management/commands/validate_source_metadata.py b/app/core/management/commands/validate_source_metadata.py
+--- a/app/core/management/commands/validate_source_metadata.py	
++++ b/app/core/management/commands/validate_source_metadata.py	
+@@ -6,7 +6,8 @@
+ from core.management.utils.xia_internal import (get_source_metadata_key_value,
+                                                 required_recommended_logs,
+                                                 check_dict, check_list,
+-                                                check_validation_value)
++                                                check_validation_value,
++                                                get_key_dict)
+ from core.management.utils.xss_client import read_json_data
+ from core.models import MetadataLedger, XIAConfiguration
+ 
+@@ -65,7 +66,7 @@
+ 
+ def source_metadata_value_for_validation(
+         ind, data_dict, required_column_name_list, validation_result):
+-    """function to navigate to value in source metadata to be validated """
++    """Function to navigate to value in source metadata to be validated """
+     # If data value is a dictionary
+     if isinstance(data_dict[required_column_name_list[0]], dict):
+         check_dict(ind, data_dict[required_column_name_list[0]],
+@@ -80,7 +81,7 @@
+ 
+     # If data value is a string or NoneType
+     else:
+-        validation_result =\
++        validation_result = \
+             check_validation_value(ind,
+                                    data_dict[required_column_name_list[0]],
+                                    required_column_name_list[0],
+@@ -97,6 +98,7 @@
+     len_source_metadata = len(source_data_dict)
+     for ind in range(len_source_metadata):
+         # Updating default validation for all records
++        key = get_key_dict(None, None)
+         validation_result = 'Y'
+         record_status_result = 'Active'
+         for table_column_name in source_data_dict[ind]:
+Index: docker-compose.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>version: \"3\"\n\nservices:\n  db_xia_dau:\n    image: mysql:5.7\n    ports:\n      - '3306:3306'\n    environment:\n      MYSQL_DATABASE: \"${DB_NAME}\"\n#      MYSQL_USER: 'root'\n      MYSQL_PASSWORD: \"${DB_PASSWORD}\"\n      MYSQL_ROOT_PASSWORD: \"${DB_ROOT_PASSWORD}\"\n      MYSQL_HOST: ''\n    networks:\n      - openlxp\n\n  app_xia_dau:\n    build:\n      context: .\n    ports:\n      - \"8000:8020\"\n    command: >\n      sh -c \". /opt/app/start-app.sh\"\n    environment:\n      DB_NAME: \"${DB_NAME}\"\n      DB_USER: \"${DB_USER}\"\n      DB_PASSWORD: \"${DB_PASSWORD}\"\n      DB_HOST: \"${DB_HOST}\"\n      DJANGO_SUPERUSER_USERNAME: \"${DJANGO_SUPERUSER_USERNAME}\"\n      DJANGO_SUPERUSER_PASSWORD: \"${DJANGO_SUPERUSER_PASSWORD}\"\n      DJANGO_SUPERUSER_EMAIL: \"${DJANGO_SUPERUSER_EMAIL}\"\n      AWS_ACCESS_KEY_ID: \"${AWS_ACCESS_KEY_ID}\"\n      AWS_SECRET_ACCESS_KEY: \"${AWS_SECRET_ACCESS_KEY}\"\n      AWS_DEFAULT_REGION: \"${AWS_DEFAULT_REGION}\"\n      REQUESTS_CA_BUNDLE: '/etc/ssl/certs/ca-certificates.pem'\n      AWS_CA_BUNDLE: '/etc/ssl/certs/ca-certificates.pem'\n      SECRET_KEY_VAL: \"${SECRET_KEY_VAL}\"\n      XIS_API_ENDPOINT: \"${XIS_API_ENDPOINT}\"\n      XSR_API_ENDPOINT: \"${XSR_API_ENDPOINT}\"\n    volumes:\n      - ./app:/opt/app/openlxp-xia-dau\n    depends_on:\n      - db_xia_dau\n    networks:\n      - openlxp\n\nnetworks:\n  openlxp:\n    external: true\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/docker-compose.yml b/docker-compose.yml
+--- a/docker-compose.yml	
++++ b/docker-compose.yml	
+@@ -39,6 +39,7 @@
+       XSR_API_ENDPOINT: "${XSR_API_ENDPOINT}"
+     volumes:
+       - ./app:/opt/app/openlxp-xia-dau
++      - C:/Users/kjijo/Documents/dockerRun/cacert.pem:/etc/ssl/certs/ca-certificates.pem
+     depends_on:
+       - db_xia_dau
+     networks:

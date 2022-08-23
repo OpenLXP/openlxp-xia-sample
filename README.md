@@ -1,1 +1,1 @@
-# openlxp-xia-sample
+# Enterprise Course Catalog: OPENLXP-SAMPLE
