@@ -1,0 +1,72 @@
+[
+    {
+    "name":"${db_name}",
+    "logConfiguration":{
+      "logDriver":"awslogs",
+      "secretOptions":null,
+      "options":{
+         "awslogs-create-group": "true",
+         "awslogs-group":"${cw_db_group}",
+         "awslogs-region":"${region}",
+         "awslogs-stream-prefix":"ecs"
+      }
+   },
+   "portMappings":[
+      {
+         "hostPort":3310,
+         "protocol":"tcp",
+         "containerPort":3306
+      }
+   ],
+   "cpu":0,
+   "environmentFiles": [
+     {
+       "type": "s3",
+       "value": "arn:aws:s3:::${bucket_name}/${key_name}"
+     }
+   ],
+   "memory":512,
+   "image":"mysql:5.7",
+   "essential":true
+    },
+    {
+     "name":"${app_name}",
+     "logConfiguration":{
+        "logDriver":"awslogs",
+        "secretOptions":null,
+        "options":{
+           "awslogs-create-group": "true",
+           "awslogs-group":"${cw_group}",
+           "awslogs-region":"${region}",
+           "awslogs-stream-prefix":"ecs"
+        }
+       },
+     "entryPoint":[
+        "sh",
+        "-c"
+     ],
+     "portMappings":[
+        {
+           "hostPort":8080,
+           "protocol":"tcp",
+           "containerPort":8020
+        }
+     ],
+     "command":[
+        ". /opt/app/start-app.sh"
+     ],
+     "cpu":0,
+     "environmentFiles": [
+       {
+         "type": "s3",
+         "value": "arn:aws:s3:::${bucket_name}/${key_name}"
+       }
+     ],
+     "workingDirectory":"/opt/app/openlxp-xis",
+     "memory":512,
+     "image":"openlxp/openlxp-xis:latest",
+     "links":[
+        "${db_name}"
+     ]
+    }
+]
