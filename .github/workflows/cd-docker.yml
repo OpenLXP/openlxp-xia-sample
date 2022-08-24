@@ -5,11 +5,15 @@ on:
     branches: 
       - main
       - feature/sample-xia
+    paths:
+      - openlxp-xia-sample/*
   pull_request:
     branches: 
       - main
       - dev
       - feature/sample-xia
+    paths:
+      - openlxp-xia-sample/*
 jobs:
   code-test:
 # Kicks off the workflow and prepares Github to run coverage test using a ubuntu-latest container.
@@ -27,7 +31,6 @@ jobs:
 # Install dependencies required for tests
     - name: Install Dependencies
       run: |
-        cd openlxp-xia-sample/
         python -m pip install --upgrade pip
         pip install -r ./requirements.txt
 # Start running test scripts and generate the coverage report
@@ -40,13 +43,12 @@ jobs:
         git clone https://openlxp-host:${{ secrets.ACCESS_TOKEN }}@github.com/OpenLXP/openlxp-private.git
         echo "Private repository cloned successfully"
         echo "Copying .env file from openlxp-private to current working directory"
-        cp ./openlxp-private/openxlp-xia-sample-env/.env ./openlxp-xia-sample/
+        cp ./openlxp-private/openxlp-xia-sample-env/.env .
         echo "Copied .env file successfully"
         echo "Create openlxp docker network"
         docker network create openlxp
         echo "Docker network successfully created"
         echo "Running coverage unit test"
-        cd openlxp-xia-sample/
         docker-compose --env-file ./.env run app_xia_sample sh -c "python manage.py waitdb && coverage run manage.py test --tag=unit && flake8 && coverage report && coverage report --fail-under=80"
 
 
@@ -81,7 +83,6 @@ jobs:
     - name: Docker build
       run: |
        echo "Start docker build"
-       cd openlxp-xia-sample/
        docker build . -t openlxp/openlxp-xia-sample
     - name: Push Image
       run: |
