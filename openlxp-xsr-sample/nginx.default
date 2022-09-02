@@ -1,0 +1,18 @@
+# nginx.default
+
+include /etc/nginx/mime.types;
+
+server {
+
+    listen 80;
+    server_name example.org;
+    root /opt/app;
+
+    location / {
+        try_files false /courseList.json;
+    }
+
+    location /courseList.json {
+        root /opt/app/;
+    }
+}

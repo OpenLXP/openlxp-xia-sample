@@ -1,0 +1,452 @@
+[
+ {
+   "coursecode": "MS01",
+   "courseTitle": "Comparative Grand Strategy and Military Doctrine",
+   "description": "explores the concept of the grand strategy and how Russia, Britain, Germany and France attempted to implement it between the late 19th and the mid-20th centuries. Topics covered include the origins of World War I and World War II, military organizations and nationalism. Course materials include a syllabus, a list of topics discussed, required and recommended reading assignments, selected lecture notes, essay assignments and a final written exam.",
+   "subject": "Military Science",
+   "startDate": 1492473600,
+   "endDate": 1619481600,
+   "courseURL": "www.sampleECC/MS01.com"
+ },
+ {
+   "coursecode": "MS02",
+   "courseTitle": "Innovation in Military Organizations",
+   "description": "explores military innovation through its causes and the application of organizational theory. It includes case studies that measure the accuracy of theories about military innovation. Topics discussed include armored warfare, submarine warfare and failed innovation. Students can access selected lecture outlines and notes, reading assignments and suggested final paper topics.",
+   "subject": "Military Science",
+   "startDate": 1492473600,
+   "endDate": 1628467200,
+   "courseURL": "www.sampleECC/MS02.com"
+ },
+ {
+   "coursecode": "MS03",
+   "courseTitle": "Organization Theory and the Military",
+   "description": "focuses on the theoretical and practical application of classic military theory and its effect on contemporary military organizations. OCW users learn about organizational failure, organizational evolution, information processing, influencing organizations and organizational rigidity within the context of military theory and history. Students can access a list of reading assignments and a final paper assignment.",
+   "subject": "Military Science",
+   "startDate": 1459728000,
+   "endDate": 1683590400,
+   "courseURL": "www.sampleECC/MS03.com"
+ },
+ {
+   "coursecode": "MS04",
+   "courseTitle": "Understanding Military Operations",
+   "description": "�explores past, present and future military operations according to their component parts, people and technology. Topics covered include urban warfare, military doctrine, nuclear deterrence, air combat and strategic mobility. Available course materials include a syllabus, list of topics discussed, a required reading list and a final research paper assignment.",
+   "subject": "Military Science",
+   "startDate": 1485561600,
+   "endDate": 1608163200,
+   "courseURL": "www.sampleECC/MS04.com"
+ },
+ {
+   "coursecode": "MS05",
+   "courseTitle": "Force and Strategy",
+   "description": "�helps students learn how military force is used in international relations and how it may be affected by economic, ethical and political elements. Military theory and coercion in bilateral and third-party military action is covered, along with World War II airpower, the presence of nuclear weapons in the Middle East and Southeast Asia, terrorism, nationalism and security studies. Students have access to the syllabus, lecture topic list, lecture notes, required reading list, class project notes, written paper assignments and supplemental resources.",
+   "subject": "Military Science",
+   "startDate": 1467331200,
+   "endDate": 1659916800,
+   "courseURL": "www.sampleECC/MS05.com"
+ },
+ {
+   "coursecode": "MS06",
+   "courseTitle": "Monitoring the Global Private Military and Security Industry",
+   "description": "�consists of an 87-minute recording of a panel discussion on the security industry and global private military. The panel discusses the industry itself, current regulatory initiatives and clients. The panelists include individuals from the U.S. and abroad.",
+   "subject": "Military Science",
+   "startDate": 1518220800,
+   "endDate": 1675296000,
+   "courseURL": "www.sampleECC/MS06.com"
+ },
+ {
+   "coursecode": "CS01",
+   "courseTitle": "Computer Science 164: Mobile Software Engineering",
+   "description": "This computer engineering online course teaches you how to design web and mobile apps by reviewing coding languages such as HTML5, PHP and JavaScript. This course was published recently in Spring 2012 and admits both undergraduates and graduate students. Structurally, Malan?s course is composed of video lectures and recitation sessions as well as supplementary class materials presented as PDF files on the course?s webpage. You should also be prepared to complete projects such as independently developing iOS apps or mobile web apps.",
+   "subject": "Computer Science",
+   "startDate": 1589846400,
+   "endDate": 1658361600,
+   "courseURL": "www.sampleECC/CS01.com"
+ },
+ {
+   "coursecode": "CS02",
+   "courseTitle": "Introduction to Robotics",
+   "description": "This computer engineering online course will introduce you to the basic fundamentals of designing, constructing and operating robotic systems by reviewing vital studies in geometry and kinematics. This course is free of charge and admits both undergraduates and graduate students, but you must have prerequisite credits in matrix algebra before enrolling. Additionally, you should review all enclosed lecture notes carefully as there is a mid-term and final examination.",
+   "subject": "Computer Science",
+   "startDate": 1452124800,
+   "endDate": 1710028800,
+   "courseURL": "www.sampleECC/CS02.com"
+ },
+ {
+   "coursecode": "CS03",
+   "courseTitle": "Introduction to Computer Science: Programming Abstractions",
+   "description": "Through this intermediate programming online course, you will develop an in-depth understanding of complex computer programming themes such as data abstraction using C++, algorithmic analysis and programming recursions. Topics of discussion in this course include the software engineering principles of fundamental data structures, space complexity analysis and data abstraction and modularity. There are no specified courses that you should take as prerequisites, however, students are expected to have considerable experience in computer science and programming methodology.",
+   "subject": "Computer Science",
+   "startDate": 1493424000,
+   "endDate": 1688083200,
+   "courseURL": "www.sampleECC/CS03.com"
+ },
+ {
+   "coursecode": "CS04",
+   "courseTitle": "Artificial Intelligence: Natural Language Processing",
+   "description": "This artificial intelligence class will provide you with an introduction to the quantitative techniques associated with natural language processing (NLP). In addition to reviewing contemporary research and methodologies, you will develop an in-depth understanding of linguistic processing algorithms and the computational elements of natural languages. Prerequisites for this robotics online course include sufficient programming experience, general knowledge of artificial intelligence concepts and computational linguistics. This course is open to advanced undergraduate and graduate students with backgrounds in symbolic systems, linguistics or computer science.",
+   "subject": "Computer Science",
+   "startDate": 1461888000,
+   "endDate": 1599091200,
+   "courseURL": "www.sampleECC/CS04.com"
+ },
+ {
+   "coursecode": "CS05",
+   "courseTitle": "Introduction to Computer Science: Programming Paradigms",
+   "description": "Through this course you will augment your computer programming knowledge while gaining practical programming experience using advanced algorithmic analysis, data abstractions and object-oriented paradigms. In addition to using traditional programming languages such as C and C++, you will practice with modern languages such as Objective C and C# and Python. Required prerequisites for this programming online course include computer programming and problem-solving skills on the CS106B/X level, as well as extensive experience using C++. Therefore, this course is open to advanced undergraduate and graduate students with backgrounds in information technology, computer science and computer programming.",
+   "subject": "Computer Science",
+   "startDate": 1519603200,
+   "endDate": 1693267200,
+   "courseURL": "www.sampleECC/CS05.com"
+ },
+ {
+   "coursecode": "CS06",
+   "courseTitle": "CHE 466: Process Dynamics and Controls",
+   "description": "Published in 2009, this process technology online course will provide you with advanced and in-depth knowledge of dynamic systems theory, control theory and process modeling. Through a combination of video lectures and session notes, you will learn how to numerically model a process from physical and logical models, articulate how processes and control objectives work, identify sensitivities in process models, comprehend multi-objective control architecture principles and realistically predict the quality range for a process. This classs is open to graduate and advanced undergraduate chemical engineering students.",
+   "subject": "Computer Science",
+   "startDate": 1516233600,
+   "endDate": 1599177600,
+   "courseURL": "www.sampleECC/CS06.com"
+ },
+ {
+   "coursecode": "CS07",
+   "courseTitle": "Object-Oriented Programming in C++",
+   "description": "This computer engineering online course will teach you key aspects of object-oriented programming using the C++ Standard Template Library (STP) of coding while also covering software development principles such as decomposition and component re-use. This 14-week course is open to both undergraduates and graduate students, but does not have any major prerequisites beyond your assumed knowledge of the C++ interface. You should also be prepared to complete ten modules, three individual assignments and one assessment.",
+   "subject": "Computer Science",
+   "startDate": 1556409600,
+   "endDate": 1673049600,
+   "courseURL": "www.sampleECC/CS07.com"
+ },
+ {
+   "coursecode": "CS08",
+   "courseTitle": "CS 470/670: Artificial Intelligence",
+   "description": "This introductory computer science online course will expose you to the techniques of artificial intelligence in computers. Through this class, you will gain a foundational understanding of how search methods, semantic networks and algorithms are used to solve practical problems. Additionally, you will learn how to program applications using the LISP language. You must complete the prerequisite computer science and math courses before you can enroll in this class.",
+   "subject": "Computer Science",
+   "startDate": 1536451200,
+   "endDate": 1600214400,
+   "courseURL": "www.sampleECC/CS08.com"
+ },
+ {
+   "coursecode": "HC01",
+   "courseTitle": "Leadership Training Workshop for Health Professionals",
+   "description": "Published in 2011, this five-day workshop is intended for mid and top-level healthcare managers in the sub-Saharan region and other similar regions around the world. During this health information management online course, you will discover ways to effectively manage healthcare services which focus on improving health and wellness in these areas. You will explore topics such as leadership practices, leading change and personal communication in additional to learning how to develop and execute a healthcare action plan.",
+   "subject": "Healthcare",
+   "startDate": 1563840000,
+   "endDate": 1638057600,
+   "courseURL": "www.sampleECC/HC01.com"
+ },
+ {
+   "coursecode": "HC02",
+   "courseTitle": "Medical Interviewing and the Doctor-Patient Relationship",
+   "description": "Communication between patients and doctors can be more complicated than you think. This technical communication online course, originally prepared in 2011, will train you in the skills needed to have a sympathetic and productive conversation with a patient, obtaining information you might need to make a diagnosis without embarrassing, discomforting or humiliating your patient. No special technology beyond a computer and internet connection is needed to access this course, although it is written for student doctors and assumes a great deal of medical knowledge.",
+   "subject": "Healthcare",
+   "startDate": 1570060800,
+   "endDate": 1699315200,
+   "courseURL": "www.sampleECC/HC02.com"
+ },
+ {
+   "coursecode": "HC03",
+   "courseTitle": "Medicine and Public Health in American History",
+   "description": "As you explore the history of medicine in America, you will examine the evolution of the social and cultural meaning of medical science and the perception of the medical profession in American life. This insurance online course will also introduce you to concepts and theories surrounding class, gender, age, race, lifestyle and location and the delivery of healthcare in America. There are no prerequisites to this undergraduate course, and it is open to students of diverse academic backgrounds. It was originally published as open courseware in 2007.",
+   "subject": "Healthcare",
+   "startDate": 1569888000,
+   "endDate": 1595721600,
+   "courseURL": "www.sampleECC/HC03.com"
+ },
+ {
+   "coursecode": "HC04",
+   "courseTitle": "Health Management I Module Guide",
+   "description": "The postgraduate online course is aimed at health care professionals working in medical administration. Through its readings, you will learn about common management principles as they apply to hospitals, clinics and other health care facilities, including human resources management, planning and best practices in the management of resources. This course is part of several similar modules that can result in a certificate.",
+   "subject": "Healthcare",
+   "startDate": 1565308800,
+   "endDate": 1701561600,
+   "courseURL": "www.sampleECC/HC04.com"
+ },
+ {
+   "coursecode": "HC05",
+   "courseTitle": "PPM 121 Nutrition and Medicine",
+   "description": "This online course is relevant not only for nursing students, but for all medical and biology undergraduates who want to understand the importance of nutrition and how it affects human health. Originally presented in the fall of 2006, this 25-hour class will teach you many important principles of nutrition in the context of medicine, including how to assess a patient's dietary status, understanding how diet influences major diseases such as type 2 diabetes, cancer or hypertension, understanding how behavior and lifestyle affect nutrition, and learning how to evaluate the adequacy of a diet.",
+   "subject": "Healthcare",
+   "startDate": 1492473600,
+   "endDate": 1635552000,
+   "courseURL": "www.sampleECC/HC05.com"
+ },
+ {
+   "coursecode": "HC06",
+   "courseTitle": "Motivational Interviewing",
+   "description": "This freshman level online course explores effective interviewing techniques doctors and other healthcare professional use to communicate with patients. Through this introductory class, you will develop the basic skills and knowledge needed to conduct doctor-patient interviews to collect necessary information and data, such as a patient?s medical history. Additionally, this course will focus on methods of building positive and trusting relationships with patients. You will learn how to empathize and carefully listen to patients? needs and concerns to build a healthy rapport with them.",
+   "subject": "Healthcare",
+   "startDate": 1482624000,
+   "endDate": 1631664000,
+   "courseURL": "www.sampleECC/HC06.com"
+ },
+ {
+   "coursecode": "HC07",
+   "courseTitle": "Medical Ethics",
+   "description": "Ethics is a very important aspect of practicing medicine, and doctors, nurses, medical assistants and others in the field of health care face ethical quandaries on a regular basis. This online course is as much about philosophy as about medicine, and through the use of audio lectures, lecture slides, and assigned readings you will examine the philosophical questions that commonly arise in the practice of medicine, including confidentiality and the doctor-patient relationship, truth-telling, informed consent, abortion, euthanasia and physician assisted suicide. The course concludes with a look at important judicial cases involving medical ethics.",
+   "subject": "Healthcare",
+   "startDate": 1536537600,
+   "endDate": 1665273600,
+   "courseURL": "www.sampleECC/HC07.com"
+ },
+ {
+   "coursecode": "HC08",
+   "courseTitle": "Foundations of Public Health",
+   "description": "Through this public health course, you will investigate the fundamental elements and factors that underline various conditions of health and disease in populations. You will take an in-depth look at how public health is approached locally and globally while studying the principles, concepts and methodologies of diverse disciplines associated with public health research and practice. Specific areas of study include topics in the social and behavioral sciences, biostatistics, epidemiology, environmental health sciences and health policy and administration. This online course is open to graduate students with a variety of academic backgrounds and experience.",
+   "subject": "Healthcare",
+   "startDate": 1551571200,
+   "endDate": 1708214400,
+   "courseURL": "www.sampleECC/HC08.com"
+ },
+ {
+   "coursecode": "HC09",
+   "courseTitle": "Public Health Emergency Planning and Management for Districts",
+   "description": "This six-day course from the East Africa HEALTH Alliance Health Emergency Management Program is a cross-university workshop for those working in public health in Africa or anywhere in the developing world. Originally presented in 2012, this online course covers such topics as how governments and public health facilities respond to disasters, how to increase preparedness, preparing for and reacting to epidemics and mass casualty incidents.",
+   "subject": "Healthcare",
+   "startDate": 1481846400,
+   "endDate": 1650844800,
+   "courseURL": "www.sampleECC/HC09.com"
+ },
+ {
+   "coursecode": "HC10",
+   "courseTitle": "Managing Human Resources for Health Module Guide",
+   "description": "This short course, originally from 2010, is designed for health care administrators and other professionals working in the field, particularly in developing countries. This medical billing and coding online course is presented by the University of the Western Cape and covers managing people specifically in the context of health care facilities. In it you will explore topics such as managing conflict, working with and supervising groups, development strategy and motivation.",
+   "subject": "Healthcare",
+   "startDate": 1468540800,
+   "endDate": 1638748800,
+   "courseURL": "www.sampleECC/HC10.com"
+ },
+ {
+   "coursecode": "HC11",
+   "courseTitle": "Population Medicine",
+   "description": "Originally recorded in the fall 2006 semester, this online course is designed to teach you to see beyond the individual patient and look at larger patterns of health and disease within entire populations, especially when it comes to elderly populations. You will study how people age in different situations, with a particular focus on how the elderly are treated in America, by studying a hypothetical model population and other case studies. This course consists of lecture transcripts and slides as well as supplementary assignments.",
+   "subject": "Healthcare",
+   "startDate": 1557792000,
+   "endDate": 1620518400,
+   "courseURL": "www.sampleECC/HC11.com"
+ },
+ {
+   "coursecode": "HC12",
+   "courseTitle": "Quality Oversight in the Health Care Marketplace",
+   "description": "Originally presented in the spring 2010 semester, this online course introduces advanced students and health care professionals to the institutions that provide oversight within the field of healthcare. In it, you will examine which institutions monitor the performance of different health care facilities, which standards of quality they adhere to, and how these standards differ between states and even individual institutions. The course also addresses the specific tools and techniques that are used in this process as well as how performance is rewarded or penalized. It consists of text lecture transcripts as well as web links to relevant materials.",
+   "subject": "Healthcare",
+   "startDate": 1566950400,
+   "endDate": 1684022400,
+   "courseURL": "www.sampleECC/HC12.com"
+ },
+ {
+   "coursecode": "ED01",
+   "courseTitle": "Education 173: Cognition & Learning in Educational Settings",
+   "description": "This education online course is a good choice if you are interested in learning about how people learn. These undergraduate course materials, originally created for a 2007 course at the University of California, will teach you about topics such as behaviorism, memory, cognitive processes, and how people think about their own thinking. To use some of the materials offered in this open course, you will need a way of viewing PowerPoint slides.",
+   "subject": "Education",
+   "startDate": 1548892800,
+   "endDate": 1597017600,
+   "courseURL": "www.sampleECC/ED01.com"
+ },
+ {
+   "coursecode": "ED02",
+   "courseTitle": "Technology and Society",
+   "description": "You can use the resources from this counselor education online course to become more familiar with how society interacts with science and engineering professions, and how the culture at large views this work. This course requires no additional programs or coursework to understand, and is taught at an undergraduate level. The course package includes lecture notes, study modules, exams, and assignments that you can use to make sure you are learning the content successfully.",
+   "subject": "Education",
+   "startDate": 1493337600,
+   "endDate": 1629417600,
+   "courseURL": "www.sampleECC/ED02.com"
+ },
+ {
+   "coursecode": "ED03",
+   "courseTitle": "Introduction to Open Education",
+   "description": "This introductory online course, originally taught by Professor David Wiley Ph.D., in 2007, will give you a firm understanding of the field of open education, which strives to give all students access to higher learning. You will explore topics like copyright, licensing, and sustainability; learn how to find open education; and begin thinking, writing, and communicating creatively and critically about current and alternative practices in open education.",
+   "subject": "Education",
+   "startDate": 1543449600,
+   "endDate": 1626480000,
+   "courseURL": "www.sampleECC/ED03.com"
+ },
+ {
+   "coursecode": "ED04",
+   "courseTitle": "PE for ME",
+   "description": "MIT?s Noah Riskin, Professor Alex Slocum, and Aline Newton originally taught this undergraduate course in 2005. A joint DAPER/ME offering for both PE and academic credit, it uses the MIT gymnastics gym as a laboratory to explore Physical Intelligence as applied to Mechanical Engineering and design. Physical Intelligence is the inherent ability of the sensing, thinking, moving human body to function in accord with its physical environment. Readings, discussions, and experiential learning will introduce you to various dimensions of Physical Intelligence, which you?ll then apply to the design of innovative exercise equipment.",
+   "subject": "Education",
+   "startDate": 1521072000,
+   "endDate": 1706486400,
+   "courseURL": "www.sampleECC/ED04.com"
+ },
+ {
+   "coursecode": "TC01",
+   "courseTitle": "Cognition & Learning in Educational Settings",
+   "description": "This is a foundational course for instructors and teachers which focuses on theories of learning and related topics to impart effective education.",
+   "subject": "Teaching",
+   "startDate": 1539993600,
+   "endDate": 1617235200,
+   "courseURL": "www.sampleECC/TC01.com"
+ },
+ {
+   "coursecode": "TC02",
+   "courseTitle": "Teaching College - Level Science and Engineering",
+   "description": "This MIT courseware is This video series covers the necessary knowledge and skills needed for teaching science and engineering in higher education. Primary audience for this video series is graduate students interested in an academic career or anyone who is interested in teaching. It is suitable for both a novice and experienced teaching audience. Focus of this video series is on the following areas, 1. How to teach equations 2. How to design homework and exam questions 3. How to use histories of science and other elements to create an absorbing lectures 4. How to cater your teaching for transfers 5. How to use foundational pieces such as planning for a course & knowledge of powerpoint",
+   "subject": "Teaching",
+   "startDate": 1574294400,
+   "endDate": 1603929600,
+   "courseURL": "www.sampleECC/TC02.com"
+ },
+ {
+   "coursecode": "TC03",
+   "courseTitle": "Exploring Teaching and Learning in Tertiary Contexts",
+   "description": "Designed particularly for tertiary, or postsecondary, educators, this online course focuses on the teaching and learning theories used in tertiary classroom environments. Through this open courseware, you will be able to identify and practice methods of teaching at the postsecondary level. During this class, you will also have the opportunity to assess your own teaching abilities and learn about important characteristics successful tertiary educators should possess. To attend this course, you must have access to a classroom or other learning setting in a college or university environment.",
+   "subject": "Teaching",
+   "startDate": 1484870400,
+   "endDate": 1622764800,
+   "courseURL": "www.sampleECC/TC03.com"
+ },
+ {
+   "coursecode": "LG01",
+   "courseTitle": "Elementary Russian I",
+   "description": "This course is an introduction the Russian and is intended to provide students basic proficiency in reading, writing, speaking and understanding Russian. Course instructor Eleonora Usenoka provides an overview for basic grammatical structures, sound patterns, spelling and vocab. To enhance the learning you will be introduced Russian society, culture, locals and real-life experiences of Russian people.",
+   "subject": "Language",
+   "startDate": 1554595200,
+   "endDate": 1632096000,
+   "courseURL": "www.sampleECC/LG01.com"
+ },
+ {
+   "coursecode": "LG02",
+   "courseTitle": "Japanese I",
+   "description": "This course is an introduction to modern standard Japanese with an emphasis on developing proficiency in speaking and listening, using basic grammar and vocabulary. Basic skills in reading and writing are also taught.",
+   "subject": "Language",
+   "startDate": 1589932800,
+   "endDate": 1606953600,
+   "courseURL": "www.sampleECC/LG02.com"
+ },
+ {
+   "coursecode": "LG03",
+   "courseTitle": "Chinese I (Regular)",
+   "description": "This course is the first of two that form an introduction to modern standard Chinese, commonly called Mandarin. Originally taught by Dr. Julian K. Wheatley in 2006, it allows undergraduate and graduate students to develop: basic conversational abilities (pronunciation, fundamental grammatical patterns, common vocabulary, and standard usage); basic reading and writing skills, in both the traditional character set and the simplified; and an understanding of the language learning process so that students can continue studying effectively on their own.",
+   "subject": "Language",
+   "startDate": 1471651200,
+   "endDate": 1713916800,
+   "courseURL": "www.sampleECC/LG03.com"
+ },
+ {
+   "coursecode": "LG04",
+   "courseTitle": "English as a Second Language (ESL) Podcast - Learn English Online",
+   "description": "This free ESL podcast series from the Center for Educational Development is a handy tool for anyone who wants to improve their English speaking and listening skills.",
+   "subject": "Language",
+   "startDate": 1520380800,
+   "endDate": 1672617600,
+   "courseURL": "www.sampleECC/LG04.com"
+ },
+ {
+   "coursecode": "LG05",
+   "courseTitle": "Germany Today: Intensive Study of German Language and Culture",
+   "description": "Prepares students for working and living in German-speaking countries. Focus on current political, social, and cultural issues, using newspapers, journals, TV, radio broadcasts, and Web sources from Germany, Austria, and Switzerland. Emphasis on speaking, writing, and reading skills for professional contexts. Activities include: oral presentations, group discussions, guest lectures, and interviews with German speakers. No listeners.",
+   "subject": "Language",
+   "startDate": 1469577600,
+   "endDate": 1620172800,
+   "courseURL": "www.sampleECC/LG05.com"
+ },
+ {
+   "coursecode": "CJ01",
+   "courseTitle": "International Studies: Global Issues & Institutions",
+   "description": "Designed in 2009, this terrorism online course will teach you about the international institutions that shape and define the world, as well as the issues which they attempt to address. You will learn about a wide range of topics from global financial markets to climate change, terrorism and clashes over cultural values. This course is written for undergraduate students wanting a survey of the world, and requires no special technology or software other than an Internet browser.",
+   "subject": "Criminal Justice",
+   "startDate": 1462060800,
+   "endDate": 1703894400,
+   "courseURL": "www.sampleECC/CJ01.com"
+ },
+ {
+   "coursecode": "CJ02",
+   "courseTitle": "IIPS 30101: Introduction to Peace Studies",
+   "description": "If you're looking for something more creative or interesting than the typical criminal justice online course, Introduction to Peace Studies may be perfect for you. This open online class was originally recorded in spring 2007, and is a survey course with no prerequisites intended not only for criminal justice students, but anyone interested in the topics of war and peace on a global scale. Its lectures and readings broach such subjects as causes of political violence, the study of war and terrorism, terrorism after 9/11, and methods of peace such as non-violent resistance.",
+   "subject": "Criminal Justice",
+   "startDate": 1456704000,
+   "endDate": 1681516800,
+   "courseURL": "www.sampleECC/CJ02.com"
+ },
+ {
+   "coursecode": "CJ03",
+   "courseTitle": "Theories of Public Policy",
+   "description": "The involvement of government in key issues, public policy framing, and public policy outcomes are some of the topics explored through this free online course. This is an undergraduate course, so students need not have previous experience with the content to understand the lectures and readings presented. Originally offered in 2005, the content includes lectures, self-assessments, and readings, and requires no additional programs to access.",
+   "subject": "Criminal Justice",
+   "startDate": 1559865600,
+   "endDate": 1612051200,
+   "courseURL": "www.sampleECC/CJ03.com"
+ },
+ {
+   "coursecode": "CJ04",
+   "courseTitle": "Disaster, Vulnerability and Resilience",
+   "description": "This graduate level course, originally published in 2005, discusses urban studies and planning policy from the perspective of rish management in natural and technological disasters, and the effects. Course topics include identifying how to ensure safety and promote equity amongst populations and how to stay familiar with the political and social dynamics in communities throughout the evolution and aftermath of a disaster. There are no prerequisites for this graduate level course.",
+   "subject": "Criminal Justice",
+   "startDate": 1467504000,
+   "endDate": 1694649600,
+   "courseURL": "www.sampleECC/CJ04.com"
+ },
+ {
+   "coursecode": "CJ05",
+   "courseTitle": "Warlords, Terrorists, and Militias: Theorizing on Violent Non-State Actors",
+   "description": "Published in 2009 by professor Fontina Christia, this graduate level course presents an overview of why warlords, terrorists and militia resort to violence. This case-study based course describes their motivations, tactics, and how to counter them. You will critically review the impact of these insurgents have and the way governments respond to violence. Apart from introducing the basic variables and theoretical and empirical findings in the literature, this course will also grapple with questions of definition, operationalization of variables, and general methodology relevant to conducting research in this area of violent conflict. The course will reference modern day battlefields of insurgents and terrorists.",
+   "subject": "Criminal Justice",
+   "startDate": 1499817600,
+   "endDate": 1591315200,
+   "courseURL": "www.sampleECC/CJ05.com"
+ },
+ {
+   "coursecode": "CJ06",
+   "courseTitle": "Immigration Law Symposium",
+   "description": "MIT?s Noah Riskin, Professor Alex Slocum, and Aline Newton originally taught this undergraduate course in 2005. A joint DAPER/ME offering for both PE and academic credit, it uses the MIT gymnastics gym as a laboratory to explore Physical Intelligence as applied to Mechanical Engineering and design. Physical Intelligence is the inherent ability of the sensing, thinking, moving human body to function in accord with its physical environment. Readings, discussions, and experiential learning will introduce you to various dimensions of Physical Intelligence, which you?ll then apply to the design of innovative exercise equipment.",
+   "subject": "Criminal Justice",
+   "startDate": 1537574400,
+   "endDate": 1598832000,
+   "courseURL": "www.sampleECC/CJ06.com"
+ },
+ {
+   "coursecode": "CJ07",
+   "courseTitle": "Ethics and the Law on the Electronic Frontier",
+   "description": "This online undergraduate course, originally presented in 2005 by professors Daniel Weitzner, Harold Abelson and Michael M.J. Fischer, considers the interaction between law, policy, and technology as they relate to the evolving controversies over control of the Internet. In addition, there will be an in-depth exploration of privacy and the notion of transparency in the regulations and technologies that govern the use of information. Topics will include the legal background for regulation of the Internet; Fourth Amendment law and electronic surveillance; profiling, data mining, and the U.S. PATRIOT Act; technologies for anonymity and transparency; and the policy-aware Web.",
+   "subject": "Criminal Justice",
+   "startDate": 1580169600,
+   "endDate": 1628467200,
+   "courseURL": "www.sampleECC/CJ07.com"
+ },
+ {
+   "coursecode": "CJ08",
+   "courseTitle": "Law and Society",
+   "description": "This criminal justice online course, originally published in 2003, provides an anthropological focused view of law as a social institution and as a feature of local cultures. The explorative nature of the topics include understanding social systems, legal reasoning, and how social change impacts legal forms. You will develop a point of view on how law can become a practical resource, a mechanism for handling a wide range of social issues and conflicst. This undergraduate level course does not require any prerequisites.",
+   "subject": "Criminal Justice",
+   "startDate": 1569715200,
+   "endDate": 1660003200,
+   "courseURL": "www.sampleECC/CJ08.com"
+ },
+ {
+   "coursecode": "IT01",
+   "courseTitle": "Ethics and Information Technology",
+   "description": "If you have ever been curious about the ethical side of Internet interaction, this IT security online course is ideal. You will learn about the dilemmas that come up when people, information and social networking software like Facebook come together, as well as studying the underlying technology of social media and other networked social activities. This course is written on the graduate level, although most of the texts are well-referenced and can be found in libraries or other journal collections.",
+   "subject": "Information Technology",
+   "startDate": 1549670400,
+   "endDate": 1679097600,
+   "courseURL": "www.sampleECC/IT01.com"
+ },
+ {
+   "coursecode": "IT02",
+   "courseTitle": "SI 640/ SI740: Digital Libraries and Archives",
+   "description": "Digital libraries and archives are covered in this library science online course, which is aimed at a graduate-level audience. You will learn about the history of the idea of the digital library and various projects that have set out to achieve it. You will also learn about the infrastructure for digital libraries and some of the unique technical challenges involved. This course is targeted towards library science students, and you may need to do some independent reading if you are not familiar with the field.",
+   "subject": "Information Technology",
+   "startDate": 1527984000,
+   "endDate": 1680307200,
+   "courseURL": "www.sampleECC/IT02.com"
+ },
+ {
+   "coursecode": "IT03",
+   "courseTitle": "Leadership and Management: Managing Change in Healthcare IT Implementations",
+   "description": "Produced in 2011, this management information systems online course introduces you to the challenges in using information technology in the health care field. In particular, it discusses the outlines of how introducing new IT into a health care setting - whether a small clinic, a large hospital or a government office - can present unique challenges, as well as how to overcome them. Presented in slideshow form, this course assumes some familiarity with both information technology and health care, but is written for a general audience.",
+   "subject": "Information Technology",
+   "startDate": 1566432000,
+   "endDate": 1694649600,
+   "courseURL": "www.sampleECC/IT03.com"
+ },
+ {
+   "coursecode": "IT04",
+   "courseTitle": "SI 657/757: Information Technology and Global Development",
+   "description": "This graduate-level instructional technology online course ? published on September 21, 2010 ? will teach you about different IT networking frameworks and elaborate on which political and economic factors are determining the growth of information technology systems in developing countries. There are no academic prerequisites for this course beyond an undergraduate degree, but grading criteria and assignments differ between masters and doctorate students. For example, a masters student is required to complete an IT design project and a policy assessment paper while doctorate students need to complete a small seminar and a critical literature review.",
+   "subject": "Information Technology",
+   "startDate": 1522454400,
+   "endDate": 1606780800,
+   "courseURL": "www.sampleECC/IT04.com"
+ }
+]

@@ -93,6 +93,11 @@ If you get an error that terraform could not be found, your PATH environment var
 
 If you're unable to connect to the endpoint, ensure your public ip address was added to local.tf before terraform apply was run. 
 
+When running it locally, make sure to include the name and network 
+```
+docker run -p 80:80 -it --network=openlxp --name=openlxp-xsr -d <image>
+```
+
 # FAQ
 
 **Q: What is Terraform?**
