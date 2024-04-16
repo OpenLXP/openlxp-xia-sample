@@ -1,0 +1,15 @@
+[
+{
+    "model": "openlxp_xia.xiaconfiguration",
+    "pk": 1,
+    "fields": {
+        "created": "2024-04-16T20:17:24.122Z",
+        "modified": "2024-04-16T20:17:24.122Z",
+        "publisher": "Sample",
+        "xss_api": "https://dev-ldss.deloitteopenlxp.com/api/",
+        "source_metadata_schema": "Sample",
+        "target_metadata_schema": "xss:1.0.0@p2881",
+        "source_file": ""
+    }
+}
+]
