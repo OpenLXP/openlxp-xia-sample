@@ -5,6 +5,8 @@ python manage.py migrate
 python manage.py createcachetable 
 python manage.py loaddata admin_theme_data.json 
 python manage.py loaddata xiaconfiguration.json 
+python manage.py loaddata xsrconfiguration.json 
+python manage.py loaddata metadatafieldoverwrite.json 
 cd /opt/app/ 
 pwd 
 ./start-server.sh

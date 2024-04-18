@@ -1,0 +1,9 @@
+[
+{
+    "model": "core.xsrconfiguration",
+    "pk": 1,
+    "fields": {
+        "xsr_api_endpoint": "https://dev-xsr.deloitteopenlxp.com/"
+    }
+}
+]
