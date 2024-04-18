@@ -1,0 +1,194 @@
+[
+{
+    "model": "openlxp_xia.metadatafieldoverwrite",
+    "pk": 1,
+    "fields": {
+        "created": "2024-04-18T20:53:10.689Z",
+        "modified": "2024-04-18T20:53:10.689Z",
+        "field_name": "AccreditedBy",
+        "field_type": "str",
+        "field_value": "Not Available",
+        "overwrite": false
+    }
+},
+{
+    "model": "openlxp_xia.metadatafieldoverwrite",
+    "pk": 2,
+    "fields": {
+        "created": "2024-04-18T20:53:10.693Z",
+        "modified": "2024-04-18T20:53:10.693Z",
+        "field_name": "CourseAudience",
+        "field_type": "str",
+        "field_value": "Not Available",
+        "overwrite": false
+    }
+},
+{
+    "model": "openlxp_xia.metadatafieldoverwrite",
+    "pk": 3,
+    "fields": {
+        "created": "2024-04-18T20:53:10.701Z",
+        "modified": "2024-04-18T20:53:10.701Z",
+        "field_name": "coursecode",
+        "field_type": "int",
+        "field_value": null,
+        "overwrite": false
+    }
+},
+{
+    "model": "openlxp_xia.metadatafieldoverwrite",
+    "pk": 4,
+    "fields": {
+        "created": "2024-04-18T20:53:10.706Z",
+        "modified": "2024-04-18T20:54:38.023Z",
+        "field_name": "CoursePrerequisites",
+        "field_type": "str",
+        "field_value": "Introductory Courses",
+        "overwrite": false
+    }
+},
+{
+    "model": "openlxp_xia.metadatafieldoverwrite",
+    "pk": 5,
+    "fields": {
+        "created": "2024-04-18T20:53:10.707Z",
+        "modified": "2024-04-18T20:53:10.707Z",
+        "field_name": "SOURCESYSTEM",
+        "field_type": "str",
+        "field_value": null,
+        "overwrite": false
+    }
+},
+{
+    "model": "openlxp_xia.metadatafieldoverwrite",
+    "pk": 6,
+    "fields": {
+        "created": "2024-04-18T20:53:10.708Z",
+        "modified": "2024-04-18T20:53:10.708Z",
+        "field_name": "description",
+        "field_type": "str",
+        "field_value": "Not Available",
+        "overwrite": false
+    }
+},
+{
+    "model": "openlxp_xia.metadatafieldoverwrite",
+    "pk": 7,
+    "fields": {
+        "created": "2024-04-18T20:53:10.709Z",
+        "modified": "2024-04-18T20:53:10.709Z",
+        "field_name": "subject",
+        "field_type": "str",
+        "field_value": "Not Available",
+        "overwrite": false
+    }
+},
+{
+    "model": "openlxp_xia.metadatafieldoverwrite",
+    "pk": 8,
+    "fields": {
+        "created": "2024-04-18T20:53:10.709Z",
+        "modified": "2024-04-18T20:53:10.709Z",
+        "field_name": "courseTitle",
+        "field_type": "str",
+        "field_value": null,
+        "overwrite": false
+    }
+},
+{
+    "model": "openlxp_xia.metadatafieldoverwrite",
+    "pk": 9,
+    "fields": {
+        "created": "2024-04-18T20:53:10.710Z",
+        "modified": "2024-04-18T20:53:10.710Z",
+        "field_name": "courseURL",
+        "field_type": "str",
+        "field_value": "Not Available",
+        "overwrite": false
+    }
+},
+{
+    "model": "openlxp_xia.metadatafieldoverwrite",
+    "pk": 10,
+    "fields": {
+        "created": "2024-04-18T20:53:10.711Z",
+        "modified": "2024-04-18T20:53:46.859Z",
+        "field_name": "endDate",
+        "field_type": "datetime",
+        "field_value": "2025-01-01T00:00:00-05:00",
+        "overwrite": false
+    }
+},
+{
+    "model": "openlxp_xia.metadatafieldoverwrite",
+    "pk": 11,
+    "fields": {
+        "created": "2024-04-18T20:53:10.711Z",
+        "modified": "2024-04-18T20:54:21.675Z",
+        "field_name": "Instructor",
+        "field_type": "str",
+        "field_value": "John Doe",
+        "overwrite": false
+    }
+},
+{
+    "model": "openlxp_xia.metadatafieldoverwrite",
+    "pk": 12,
+    "fields": {
+        "created": "2024-04-18T20:53:10.712Z",
+        "modified": "2024-04-18T20:53:53.050Z",
+        "field_name": "startDate",
+        "field_type": "datetime",
+        "field_value": "2024-01-01T00:00:00-05:00",
+        "overwrite": false
+    }
+},
+{
+    "model": "openlxp_xia.metadatafieldoverwrite",
+    "pk": 13,
+    "fields": {
+        "created": "2024-04-18T20:53:10.713Z",
+        "modified": "2024-04-18T20:55:22.155Z",
+        "field_name": "Thumbnail",
+        "field_type": "str",
+        "field_value": "https://media.defense.gov/2017/Mar/16/2001717578/-1/-1/0/170316-D-ZZ999-082.JPG",
+        "overwrite": false
+    }
+},
+{
+    "model": "openlxp_xia.metadatafieldoverwrite",
+    "pk": 14,
+    "fields": {
+        "created": "2024-04-18T20:53:10.713Z",
+        "modified": "2024-04-18T20:53:10.713Z",
+        "field_name": "Maintainer",
+        "field_type": "str",
+        "field_value": "Not Available",
+        "overwrite": false
+    }
+},
+{
+    "model": "openlxp_xia.metadatafieldoverwrite",
+    "pk": 15,
+    "fields": {
+        "created": "2024-04-18T20:53:10.714Z",
+        "modified": "2024-04-18T20:53:10.714Z",
+        "field_name": "Provider",
+        "field_type": "str",
+        "field_value": "Not Available",
+        "overwrite": false
+    }
+},
+{
+    "model": "openlxp_xia.metadatafieldoverwrite",
+    "pk": 16,
+    "fields": {
+        "created": "2024-04-18T20:53:10.715Z",
+        "modified": "2024-04-18T20:53:10.715Z",
+        "field_name": "Location",
+        "field_type": "str",
+        "field_value": "Not Available",
+        "overwrite": false
+    }
+}
+]

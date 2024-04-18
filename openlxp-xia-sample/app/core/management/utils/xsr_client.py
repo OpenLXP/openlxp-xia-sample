@@ -30,7 +30,7 @@ def get_xsr_api_response():
 
     # creating HTTP response object from given url
     try:
-        resp = requests.get(url)
+        resp = requests.get(url, verify=False)
     except requests.exceptions.RequestException as e:
         logger.error(e)
         raise SystemExit('Exiting! Can not make connection with XSR.')
@@ -141,7 +141,7 @@ def add_url_to_course(temp_val):
     """function to add url to course"""
     base_url = get_xsr_api_endpoint()
     base_url = base_url.split("webservice")[0]
-    if temp_val["id"]:
-        url = base_url + "course/view.php?id=" + str(temp_val["id"])
+    if temp_val["coursecode"]:
+        url = base_url + "course/view.php?id=" + str(temp_val["coursecode"])
         temp_val["url"] = url
     return temp_val
