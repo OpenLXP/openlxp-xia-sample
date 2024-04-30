@@ -18,7 +18,8 @@ django-admin-interface>=0.28.3
 
 django-celery-beat >=2.2.1, <2.3.0
 
-django-celery-results >=2.2.0, <2.3.0
+# django-celery-results >=2.2.0, <2.3.0
+django-celery-results>=2.4.0, <2.5.0
 
 django-colorfield>=0.11.0
 
@@ -26,12 +27,13 @@ django-model-utils>=4.1.1,<4.2.0
 
 django-mysql>=4.4.0,<4.5.0
 
-django-ses>=2.2.0 , <2.3.1
+# django-ses>=2.2.0 , <2.3.1
 
 # djangorestframework>=3.13.0,<3.13.1
 djangorestframework>=3.13.0,<3.16.0
 
-flower <=1.0.0
+# flower <=1.0.0
+flower>=1.2.0, <2.0.0
 
 flake8>=3.9.0,<4.0.1
 
@@ -65,11 +67,12 @@ python-magic >=0.4.27, <0.5
 
 python-slugify>=8.0.1
 
-pytz >=2021.1, <2021.3
+# pytz >=2021.1, <2021.3
+pytz >=2021.3, <2022.1
 
 redis==4.1.2
 
-requests~=2.27.1
+requests>=2.31.0, <2.32.0
 
 s3fs==0.4.2
 
